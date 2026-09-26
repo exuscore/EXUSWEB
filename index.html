@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EXUS WEB | Páginas Web Profesionales</title>
+
+    <meta
+        name="description"
+        content="EXUS WEB crea páginas web modernas, profesionales y adaptadas para negocios."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           WHATSAPP
+        ========================================= */
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            padding: 15px 22px;
+
+            background: #b9ff3f;
+            color: #071006;
+
+            border-radius: 8px;
+
+            font-size: 13px;
+            font-weight: 900;
+
+            transition: all .3s ease;
+
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(185,255,63,.25);
+        }
+
+
+        /* =========================================
+           BOTÓN FLOTANTE
+        ========================================= */
+
+        .whatsapp-floating {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 62px;
+            height: 62px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #25D366;
+            color: white;
+
+            font-size: 28px;
+
+            z-index: 9999;
+
+            box-shadow: 0 10px 35px rgba(0,0,0,.4);
+
+            transition: .3s;
+        }
+
+        .whatsapp-floating:hover {
+            transform: scale(1.12);
+        }
+
+
+        /* =========================================
+           BOTONES DE PLANES
+        ========================================= */
+
+        .plan-whatsapp {
+            display: block;
+
+            text-align: center;
+
+            padding: 13px;
+
+            margin-top: 20px;
+
+            background: #b9ff3f;
+
+            color: #071006;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+            font-weight: 900;
+
+            transition: .3s;
+        }
+
+        .plan-whatsapp:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================
+           MENÚ MÓVIL
+        ========================================= */
+
+        .mobile-menu {
+            display: none;
+
+            position: absolute;
+
+            top: 76px;
+            left: 0;
+            right: 0;
+
+            padding: 20px;
+
+            background: #0b0e0c;
+
+            border-bottom: 1px solid #29312c;
+
+            z-index: 1000;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+
+            padding: 15px;
+
+            color: #dfe5e0;
+
+            border-bottom: 1px solid #202722;
+
+            font-size: 13px;
+        }
+
+        .mobile-menu a:hover {
+            color: #b9ff3f;
+        }
+
+
+        /* =========================================
+           ETIQUETA DEMO
+        ========================================= */
+
+        .demo-warning {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 6px 10px;
+
+            border: 1px solid #4b554d;
+
+            border-radius: 5px;
+
+            color: #8c978f;
+
+            font-size: 9px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width:850px) {
+
+            .mobile-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: block;
+            }
+
+        }
+
+
+        @media(max-width:560px) {
+
+            .whatsapp-floating {
+                width: 56px;
+                height: 56px;
+
+                right: 18px;
+                bottom: 18px;
+
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="nav">
+
+    <a href="#inicio" class="brand">
+        EXUS <span>WEB</span>
+    </a>
+
+
+    <nav>
+
+        <a href="#servicios">
+            Servicios
+        </a>
+
+        <a href="#proyectos">
+            Proyectos
+        </a>
+
+        <a href="#precios">
+            Precios
+        </a>
+
+        <a href="#proceso">
+            Proceso
+        </a>
+
+    </nav>
+
+
+    <a
+        href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%20%F0%9F%91%8B%20quiero%20informaci%C3%B3n%20sobre%20sus%20p%C3%A1ginas%20web."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nav-cta"
+    >
+        WhatsApp <span>↗</span>
+    </a>
+
+
+    <button
+        type="button"
+        class="menu"
+        id="menuButton"
+        aria-label="Abrir menú"
+    >
+        ☰
+    </button>
+
+
+</header>
+
+
+<!-- =====================================================
+     MENÚ MÓVIL
+===================================================== -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#servicios">
+        Servicios
+    </a>
+
+    <a href="#proyectos">
+        Proyectos
+    </a>
+
+    <a href="#precios">
+        Precios
+    </a>
+
+    <a href="#proceso">
+        Proceso
+    </a>
+
+    <a
+        href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%20%F0%9F%91%8B%20quiero%20informaci%C3%B3n."
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        💬 Hablar por WhatsApp
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="inicio">
+
+
+    <div class="hero-copy">
+
+
+        <div class="eyebrow">
+
+            <i></i>
+
+            DISEÑO WEB PARA NEGOCIOS
+
+        </div>
+
+
+        <h1>
+
+            Tu negocio
+            merece verse
+            <em>increíble.</em>
+
+        </h1>
+
+
+        <p>
+
+            Creamos páginas web modernas, rápidas y
+            profesionales para que tu negocio tenga
+            una presencia digital que realmente
+            llame la atención.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%20%F0%9F%91%8B%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="whatsapp-btn"
+            >
+
+                💬
+
+                Quiero mi página web
+
+            </a>
+
+
+            <a
+                href="#proyectos"
+                class="btn ghost"
+            >
+
+                Ver proyectos
+
+            </a>
+
+
+        </div>
+
+
+        <div class="trust">
+
+
+            <div class="avatars">
+
+                <b>EW</b>
+
+                <b>01</b>
+
+                <b>+</b>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Diseño moderno
+                </strong>
+
+                <small>
+                    Adaptado a celular y computador
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         VISUAL
+    ================================================== -->
+
+    <div class="hero-visual">
+
+
+        <div class="browser">
+
+
+            <div class="browser-top">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <label>
+                    exusweb
+                </label>
+
+            </div>
+
+
+            <div class="demo-site">
+
+
+                <div class="demo-nav">
+
+                    <strong>
+                        EXUS<span>.</span>
+                    </strong>
+
+                    <small>
+                        INICIO &nbsp; SERVICIOS &nbsp; CONTACTO
+                    </small>
+
+                    <b>
+                        WEB
+                    </b>
+
+                </div>
+
+
+                <div class="demo-body">
+
+
+                    <small>
+                        TU NEGOCIO ONLINE
+                    </small>
+
+
+                    <h2>
+                        Más clientes.
+                        <br>
+                        Más presencia.
+                    </h2>
+
+
+                    <p>
+                        Una página web diseñada
+                        para hacer que tu negocio destaque.
+                    </p>
+
+
+                    <a
+                        href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%20%F0%9F%91%8B%20quiero%20conocer%20sus%20servicios."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="whatsapp-btn"
+                    >
+                        HABLAR CON EXUS WEB
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="float-card card-one">
+
+            <strong>
+                ⚡ Diseño rápido
+            </strong>
+
+            <small>
+                Sitios optimizados
+            </small>
+
+        </div>
+
+
+        <div class="float-card card-two">
+
+            <strong>
+                📱 Responsive
+            </strong>
+
+            <small>
+                Celular + PC
+            </small>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORÍAS
+===================================================== -->
+
+<section class="logos">
+
+    Diseñamos páginas para negocios como
+
+    <div>
+
+        <span>BARBERÍAS</span>
+
+        <span>RESTAURANTES</span>
+
+        <span>TIENDAS</span>
+
+        <span>MOTOS</span>
+
+        <span>EMPRENDIMIENTOS</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICIOS
+===================================================== -->
+
+<section class="section" id="servicios">
+
+
+    <div class="section-head">
+
+
+        <div>
+
+            <div class="kicker">
+                LO QUE HACEMOS
+            </div>
+
+
+            <h2>
+
+                Todo lo que
+                <br>
+                necesita tu negocio.
+
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Nosotros convertimos la idea de tu negocio
+            en una página web moderna y profesional.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="services-grid">
+
+
+        <article>
+
+            <div class="icon">
+                ◈
+            </div>
+
+            <h3>
+                Diseño Web
+            </h3>
+
+            <p>
+                Una página moderna y personalizada
+                para representar tu negocio.
+            </p>
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20quiero%20cotizar%20un%20dise%C3%B1o%20web."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Cotizar →
+            </a>
+
+        </article>
+
+
+        <article>
+
+            <div class="icon">
+                ◉
+            </div>
+
+            <h3>
+                WhatsApp
+            </h3>
+
+            <p>
+                Tus clientes podrán contactarte
+                directamente desde tu página.
+            </p>
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20quiero%20una%20p%C3%A1gina%20con%20bot%C3%B3n%20de%20WhatsApp."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Saber más →
+            </a>
+
+        </article>
+
+
+        <article>
+
+            <div class="icon">
+                ▣
+            </div>
+
+            <h3>
+                Catálogo Online
+            </h3>
+
+            <p>
+                Muestra productos y servicios
+                de forma profesional.
+            </p>
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20interesa%20un%20cat%C3%A1logo%20online."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Cotizar →
+            </a>
+
+        </article>
+
+
+        <article>
+
+            <div class="icon">
+                ◇
+            </div>
+
+            <h3>
+                Tienda Online
+            </h3>
+
+            <p>
+                Una solución para mostrar y vender
+                tus productos por Internet.
+            </p>
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20tienda%20online."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Saber más →
+            </a>
+
+        </article>
+
+
+        <article>
+
+            <div class="icon">
+                ⌁
+            </div>
+
+            <h3>
+                Presencia Digital
+            </h3>
+
+            <p>
+                Te ayudamos a tener una presencia
+                profesional en Internet.
+            </p>
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20quiero%20mejorar%20la%20presencia%20digital%20de%20mi%20negocio."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar →
+            </a>
+
+        </article>
+
+
+        <article>
+
+            <div class="icon">
+                +
+            </div>
+
+            <h3>
+                Mantenimiento
+            </h3>
+
+            <p>
+                Actualizamos productos, imágenes,
+                textos y contenido de tu página.
+            </p>
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20quiero%20informaci%C3%B3n%20sobre%20mantenimiento%20web."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar →
+            </a>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROYECTOS
+===================================================== -->
+
+<section
+    class="section projects"
+    id="proyectos"
+>
+
+
+    <div class="section-head">
+
+
+        <div>
+
+            <div class="kicker">
+                PORTAFOLIO DEMO
+            </div>
+
+
+            <h2>
+
+                Así podría verse
+                <br>
+                tu negocio.
+
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Ejemplos demostrativos creados
+            para mostrar diferentes estilos.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="project-grid">
+
+
+        <article class="project p1">
+
+            <span class="project-label">
+                DEMO
+            </span>
+
+
+            <div class="project-info">
+
+                <h3>
+                    BLACKROOM
+                </h3>
+
+                <p>
+                    Barbería moderna
+                </p>
+
+
+                <a
+                    href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20BLACKROOM."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Crear algo similar →
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+
+        <article class="project p2">
+
+            <span class="project-label">
+                DEMO
+            </span>
+
+
+            <div class="project-info">
+
+                <h3>
+                    CASA SABOR
+                </h3>
+
+                <p>
+                    Restaurante
+                </p>
+
+
+                <a
+                    href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20CASA%20SABOR."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Crear algo similar →
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+
+        <article class="project p3">
+
+            <span class="project-label">
+                DEMO
+            </span>
+
+
+            <div class="project-info">
+
+                <h3>
+                    RIDER GARAGE
+                </h3>
+
+                <p>
+                    Taller y accesorios para motos
+                </p>
+
+
+                <a
+                    href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20RIDER%20GARAGE."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Crear algo similar →
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <div class="demo-warning">
+
+        ⚡ Proyectos demostrativos — no representan clientes reales.
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOWCASE
+===================================================== -->
+
+<section class="showcase">
+
+
+    <div class="showcase-copy">
+
+
+        <div class="kicker">
+            DISEÑO RESPONSIVE
+        </div>
+
+
+        <h2>
+
+            Tu página se verá
+            bien en cualquier pantalla.
+
+        </h2>
+
+
+        <p>
+
+            Diseñamos pensando en las personas
+            que visitan los negocios desde el celular.
+
+        </p>
+
+
+        <div class="check">
+
+            <span>✓</span>
+
+            <div>
+
+                <b>
+                    Diseño adaptable
+                </b>
+
+                <small>
+                    Celular, tablet y computador.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="check">
+
+            <span>✓</span>
+
+            <div>
+
+                <b>
+                    WhatsApp integrado
+                </b>
+
+                <small>
+                    Contacto directo con tus clientes.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="check">
+
+            <span>✓</span>
+
+            <div>
+
+                <b>
+                    Diseño profesional
+                </b>
+
+                <small>
+                    Una imagen digital moderna.
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="phone">
+
+
+        <div class="phone-screen">
+
+
+            <small>
+                EXUS WEB
+            </small>
+
+
+            <h3>
+
+                Tu negocio.
+                <br>
+                Tu página.
+
+            </h3>
+
+
+            <p>
+                Diseño moderno para tu negocio.
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20quiero%20una%20p%C3%A1gina%20como%20la%20demostraci%C3%B3n."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="whatsapp-btn"
+            >
+
+                CONTACTAR
+
+            </a>
+
+
+            <div class="phone-img"></div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESO
+===================================================== -->
+
+<section
+    class="section"
+    id="proceso"
+>
+
+
+    <div class="section-head">
+
+
+        <div>
+
+            <div class="kicker">
+                NUESTRO PROCESO
+            </div>
+
+
+            <h2>
+
+                De la idea
+                <br>
+                a Internet.
+
+            </h2>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="steps">
+
+
+        <div>
+
+            <b>01</b>
+
+            <h3>
+                Hablamos
+            </h3>
+
+            <p>
+                Conocemos tu negocio y lo que necesitas.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <b>02</b>
+
+            <h3>
+                Diseñamos
+            </h3>
+
+            <p>
+                Creamos una propuesta visual para tu negocio.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <b>03</b>
+
+            <h3>
+                Construimos
+            </h3>
+
+            <p>
+                Desarrollamos tu página web.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <b>04</b>
+
+            <h3>
+                Publicamos
+            </h3>
+
+            <p>
+                Dejamos tu página lista para tus clientes.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PRECIOS
+===================================================== -->
+
+<section
+    class="section plans"
+    id="precios"
+>
+
+
+    <div class="section-head">
+
+
+        <div>
+
+            <div class="kicker">
+                PLANES DE REFERENCIA
+            </div>
+
+
+            <h2>
+
+                Empieza a
+                <br>
+                construir tu presencia.
+
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Valores de referencia. El precio final
+            depende de las características del proyecto.
+
+        </p>
+
+
+    </div>
+
+
+    <!-- =================================================
+         DESCUENTO PRIMERA COMPRA
+    ================================================== -->
+
+    <div>
+
+        <strong>
+            🔥 20% DE DESCUENTO EN TU PRIMERA COMPRA
+        </strong>
+
+        <p>
+            Aprovecha el descuento especial de EXUS WEB
+            por ser tu primera compra.
+        </p>
+
+    </div>
+
+
+
+    <div class="price-grid">
+
+
+        <!-- BÁSICO -->
+
+        <article>
+
+            <span>
+                BÁSICO
+            </span>
+
+
+            <h3>
+
+                $99.000
+
+                <small>
+                    COP
+                </small>
+
+            </h3>
+
+
+            <p>
+                Para pequeños negocios.
+            </p>
+
+
+            <ul>
+
+                <li>✓ Página principal</li>
+
+                <li>✓ Diseño responsive</li>
+
+                <li>✓ Botón WhatsApp</li>
+
+                <li>✓ Información del negocio</li>
+
+                <li>✓ Mantenimiento y garantía</li>
+
+                <li>✓ 3 primeros meses incluidos</li>
+
+            </ul>
+
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20interesa%20el%20plan%20B%C3%81SICO%20de%20%2499.000%20y%20quiero%20el%2020%25%20de%20descuento%20por%20mi%20primera%20compra."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="plan-whatsapp"
+            >
+
+                Cotizar este plan
+
+            </a>
+
+        </article>
+
+
+
+        <!-- PROFESIONAL -->
+
+        <article class="featured">
+
+            <label>
+                MÁS ELEGIDO
+            </label>
+
+
+            <span>
+                PROFESIONAL
+            </span>
+
+
+            <h3>
+
+                $189.000
+
+                <small>
+                    COP
+                </small>
+
+            </h3>
+
+
+            <p>
+                Para negocios que quieren destacar.
+            </p>
+
+
+            <ul>
+
+                <li>✓ Todo el plan básico</li>
+
+                <li>✓ Varias secciones</li>
+
+                <li>✓ Catálogo</li>
+
+                <li>✓ Diseño personalizado</li>
+
+                <li>✓ WhatsApp integrado</li>
+
+                <li>✓ Mantenimiento y garantía</li>
+
+                <li>✓ 3 primeros meses incluidos</li>
+
+            </ul>
+
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20interesa%20el%20plan%20PROFESIONAL%20de%20%24189.000%20y%20quiero%20el%2020%25%20de%20descuento%20por%20mi%20primera%20compra."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="plan-whatsapp"
+            >
+
+                Quiero este plan
+
+            </a>
+
+        </article>
+
+
+
+        <!-- TIENDA -->
+
+        <article>
+
+            <span>
+                TIENDA ONLINE
+            </span>
+
+
+            <h3>
+
+                $399.000
+
+                <small>
+                    COP
+                </small>
+
+            </h3>
+
+
+            <p>
+                Para vender productos online.
+            </p>
+
+
+            <ul>
+
+                <li>✓ Catálogo de productos</li>
+
+                <li>✓ Diseño personalizado</li>
+
+                <li>✓ Carrito</li>
+
+                <li>✓ WhatsApp</li>
+
+                <li>✓ Funciones adicionales</li>
+
+                <li>✓ Mantenimiento y garantía</li>
+
+                <li>✓ 3 primeros meses incluidos</li>
+
+            </ul>
+
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20TIENDA%20ONLINE%20de%20%24399.000%20y%20quiero%20el%2020%25%20de%20descuento%20por%20mi%20primera%20compra."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="plan-whatsapp"
+            >
+
+                Consultar tienda
+
+            </a>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- =================================================
+         MANTENIMIENTO Y GARANTÍA
+    ================================================== -->
+
+    <div>
+
+        <strong>
+            🛠️ MANTENIMIENTO Y GARANTÍA INCLUIDOS
+        </strong>
+
+        <p>
+            Los primeros 3 meses de mantenimiento y garantía
+            están incluidos en todos nuestros planes.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         PRECIOS CON DESCUENTO
+    ================================================== -->
+
+    <div>
+
+        <strong>
+            🎁 PRECIOS CON 20% DE DESCUENTO EN TU PRIMERA COMPRA
+        </strong>
+
+        <p>
+            Básico: <strong>$79.200 COP</strong>
+            <br>
+            Profesional: <strong>$151.200 COP</strong>
+            <br>
+            Tienda Online: <strong>$319.200 COP</strong>
+        </p>
+
+        <a
+            href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20quiero%20aprovechar%20el%2020%25%20de%20descuento%20en%20mi%20primera%20compra."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="plan-whatsapp"
+        >
+
+            🚀 Aprovechar 20% de descuento
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+
+    <div>
+
+
+        <div class="kicker">
+            ¿LISTO PARA COMENZAR?
+        </div>
+
+
+        <h2>
+
+            Hagamos crecer
+            <br>
+            tu negocio.
+
+        </h2>
+
+
+        <p>
+
+            Cuéntanos qué negocio tienes
+            y qué página estás imaginando.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="contact-card">
+
+
+        <h3>
+            Hablemos directamente
+        </h3>
+
+
+        <p>
+            Escríbenos y cuéntanos tu idea.
+        </p>
+
+
+        <a
+            href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%20%F0%9F%91%8B%20quiero%20crear%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp"
+        >
+
+            <span>
+                💬 WhatsApp
+            </span>
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+        <small>
+            321 927 2643
+        </small>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="brand">
+
+        EXUS <span>WEB</span>
+
+    </div>
+
+
+    <p>
+
+        © 2026 EXUS WEB.
+        Diseño web para negocios.
+
+    </p>
+
+
+    <a
+        href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%20%F0%9F%91%8B"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        WhatsApp ↗
+
+    </a>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOTÓN FLOTANTE WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%20%F0%9F%91%8B%20quiero%20informaci%C3%B3n."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-floating"
+    aria-label="Contactar por WhatsApp"
+>
+
+    💬
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const menuButton = document.getElementById("menuButton");
+
+        const mobileMenu = document.getElementById("mobileMenu");
+
+
+        /* =========================================
+           MENÚ MÓVIL
+        ========================================= */
+
+        if (menuButton && mobileMenu) {
+
+            menuButton.addEventListener("click", function () {
+
+                mobileMenu.classList.toggle("active");
+
+            });
+
+
+            const mobileLinks =
+                mobileMenu.querySelectorAll("a");
+
+
+            mobileLinks.forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    mobileMenu.classList.remove("active");
+
+                });
+
+            });
+
+        }
+
+
+        /* =========================================
+           ANIMACIÓN DE ENTRADA
+        ========================================= */
+
+        const elements =
+            document.querySelectorAll(
+                ".services-grid article, .project, .steps div, .price-grid article"
+            );
+
+
+        const observer =
+            new IntersectionObserver(
+                function (entries) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.style.opacity = "1";
+
+                            entry.target.style.transform =
+                                "translateY(0)";
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        elements.forEach(function (element) {
+
+            element.style.opacity = "0";
+
+            element.style.transform =
+                "translateY(20px)";
+
+            element.style.transition =
+                "opacity .6s ease, transform .6s ease";
+
+            observer.observe(element);
+
+        });
+
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
