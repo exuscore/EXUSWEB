@@ -179,7 +179,757 @@
 
 
         /* =========================================
-           RESPONSIVE
+           PORTAFOLIO PROFESIONAL
+        ========================================= */
+
+        .professional-portfolio {
+            width: 100%;
+        }
+
+        .portfolio-projects {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+
+            margin-top: 45px;
+        }
+
+        .portfolio-project {
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 520px;
+
+            border: 1px solid #29312c;
+
+            border-radius: 18px;
+
+            background: #0a0d0b;
+
+            transition:
+                transform .4s ease,
+                border-color .4s ease,
+                box-shadow .4s ease;
+        }
+
+        .portfolio-project:hover {
+            transform: translateY(-8px);
+
+            border-color: #b9ff3f;
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.55);
+        }
+
+
+        /* =========================================
+           IMAGEN
+        ========================================= */
+
+        .portfolio-image {
+            position: relative;
+
+            height: 390px;
+
+            overflow: hidden;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform .7s ease,
+                filter .7s ease;
+        }
+
+        .portfolio-project:hover .portfolio-image img {
+            transform: scale(1.07);
+
+            filter:
+                brightness(.78)
+                saturate(1.1);
+        }
+
+
+        /* =========================================
+           DEGRADADO
+        ========================================= */
+
+        .portfolio-image::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,.05) 25%,
+                    rgba(0,0,0,.25) 45%,
+                    rgba(0,0,0,.94) 100%
+                );
+
+            pointer-events: none;
+        }
+
+
+        /* =========================================
+           ETIQUETA DEMO
+        ========================================= */
+
+        .portfolio-demo-label {
+            position: absolute;
+
+            top: 20px;
+            left: 20px;
+
+            z-index: 5;
+
+            padding: 8px 12px;
+
+            border: 1px solid rgba(255,255,255,.35);
+
+            background: rgba(5,7,6,.7);
+
+            backdrop-filter: blur(10px);
+
+            color: #fff;
+
+            border-radius: 5px;
+
+            font-size: 9px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================
+           INFORMACIÓN SOBRE IMAGEN
+        ========================================= */
+
+        .portfolio-overlay-content {
+            position: absolute;
+
+            z-index: 4;
+
+            left: 28px;
+            right: 28px;
+            bottom: 25px;
+        }
+
+        .portfolio-category {
+            color: #b9ff3f;
+
+            font-size: 9px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+        .portfolio-overlay-content h3 {
+            margin: 8px 0;
+
+            color: #fff;
+
+            font-size: 34px;
+
+            letter-spacing: -1px;
+        }
+
+        .portfolio-overlay-content p {
+            margin: 0;
+
+            color: #d2d6d3;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================
+           PARTE INFERIOR
+        ========================================= */
+
+        .portfolio-bottom {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 22px 25px;
+
+            background: #0b0f0d;
+        }
+
+        .portfolio-bottom-info strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 14px;
+        }
+
+        .portfolio-bottom-info span {
+            display: block;
+
+            margin-top: 5px;
+
+            color: #737c75;
+
+            font-size: 11px;
+        }
+
+        .portfolio-link {
+            flex-shrink: 0;
+
+            padding: 11px 16px;
+
+            border: 1px solid #b9ff3f;
+
+            border-radius: 6px;
+
+            color: #b9ff3f;
+
+            font-size: 10px;
+            font-weight: 900;
+
+            text-decoration: none;
+
+            transition: .3s;
+        }
+
+        .portfolio-link:hover {
+            background: #b9ff3f;
+
+            color: #071006;
+        }
+
+
+        /* =========================================
+           PROYECTO GRANDE
+        ========================================= */
+
+        .portfolio-project-wide {
+            grid-column: 1 / -1;
+        }
+
+        .portfolio-project-wide .portfolio-image {
+            height: 470px;
+        }
+
+
+        /* =========================================
+           CTA DEL PORTAFOLIO
+        ========================================= */
+
+        .portfolio-cta {
+            margin-top: 30px;
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            border: 1px solid #29312c;
+
+            border-radius: 16px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(185,255,63,.08),
+                    transparent 55%
+                );
+        }
+
+        .portfolio-cta h3 {
+            margin: 0;
+
+            color: #fff;
+
+            font-size: 28px;
+        }
+
+        .portfolio-cta p {
+            max-width: 650px;
+
+            margin: 12px auto 22px;
+
+            color: #8b948d;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .portfolio-cta a {
+            display: inline-block;
+
+            padding: 14px 22px;
+
+            background: #b9ff3f;
+
+            color: #071006;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+            font-weight: 900;
+
+            text-decoration: none;
+
+            transition: .3s;
+        }
+
+        .portfolio-cta a:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px rgba(185,255,63,.2);
+        }
+
+
+        /* =========================================
+           NUESTRA HISTORIA - EXUS
+        ========================================= */
+
+        .exus-history {
+            position: relative;
+
+            margin-top: 30px;
+
+            padding: 55px 45px;
+
+            border: 1px solid #29312c;
+
+            border-radius: 18px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(185,255,63,.07),
+                    transparent 35%
+                ),
+                #0a0d0b;
+
+            overflow: hidden;
+        }
+
+        .exus-history::before {
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            top: -90px;
+            right: -70px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(185,255,63,.15);
+
+            pointer-events: none;
+        }
+
+        .history-content {
+            display: grid;
+
+            grid-template-columns: 1.35fr .65fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .history-text .kicker {
+            margin-bottom: 12px;
+        }
+
+        .history-text h2 {
+            margin: 0 0 22px;
+
+            color: #fff;
+
+            font-size: 38px;
+
+            line-height: 1.05;
+
+            letter-spacing: -1.5px;
+        }
+
+        .history-text h2 em {
+            color: #b9ff3f;
+
+            font-style: normal;
+        }
+
+        .history-text p {
+            max-width: 720px;
+
+            margin: 0 0 16px;
+
+            color: #9aa39d;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        .history-final {
+            margin-top: 25px;
+
+            padding-left: 16px;
+
+            border-left: 2px solid #b9ff3f;
+
+            color: #fff;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+        .history-certificate {
+            position: relative;
+
+            padding: 16px;
+
+            border: 1px solid #344039;
+
+            border-radius: 14px;
+
+            background: #070a08;
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.4);
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .history-certificate:hover {
+            transform: translateY(-6px);
+
+            border-color: #b9ff3f;
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.55);
+        }
+
+        .history-certificate-label {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-bottom: 13px;
+
+            color: #b9ff3f;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.5px;
+        }
+
+        .history-certificate-image {
+            width: 100%;
+
+            display: block;
+
+            border-radius: 8px;
+
+            border: 1px solid #252d28;
+
+            cursor: pointer;
+
+            transition: .35s ease;
+        }
+
+        .history-certificate-image:hover {
+            filter: brightness(.82);
+        }
+
+        .history-certificate-info {
+            padding: 15px 3px 3px;
+        }
+
+        .history-certificate-info strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 13px;
+        }
+
+        .history-certificate-info span {
+            display: block;
+
+            margin-top: 5px;
+
+            color: #7f8982;
+
+            font-size: 10px;
+        }
+
+        .history-certificate-button {
+            width: 100%;
+
+            margin-top: 13px;
+
+            padding: 11px;
+
+            border: 1px solid #b9ff3f;
+
+            border-radius: 6px;
+
+            background: transparent;
+
+            color: #b9ff3f;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .history-certificate-button:hover {
+            background: #b9ff3f;
+
+            color: #071006;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           MODAL CERTIFICADO
+        ========================================= */
+
+        .certificate-modal {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 10000;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 25px;
+
+            background: rgba(0,0,0,.88);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .certificate-modal.active {
+            display: flex;
+        }
+
+        .certificate-modal-content {
+            position: relative;
+
+            max-width: 1000px;
+            max-height: 92vh;
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: 1px solid #3a443d;
+
+            border-radius: 12px;
+
+            background: #090c0a;
+
+            box-shadow:
+                0 30px 100px rgba(0,0,0,.7);
+
+            animation:
+                certificateOpen .3s ease;
+        }
+
+        .certificate-modal-content img {
+            display: block;
+
+            width: 100%;
+
+            max-height: 84vh;
+
+            object-fit: contain;
+
+            border-radius: 6px;
+        }
+
+        .certificate-close {
+            position: absolute;
+
+            top: -16px;
+            right: -16px;
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #3a443d;
+
+            border-radius: 50%;
+
+            background: #101511;
+
+            color: #fff;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .certificate-close:hover {
+            background: #b9ff3f;
+
+            color: #071006;
+
+            transform: rotate(90deg);
+        }
+
+        @keyframes certificateOpen {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    scale(.94)
+                    translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    scale(1)
+                    translateY(0);
+            }
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE PORTAFOLIO
+        ========================================= */
+
+        @media(max-width:900px) {
+
+            .portfolio-projects {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-project-wide {
+                grid-column: auto;
+            }
+
+            .portfolio-project-wide .portfolio-image {
+                height: 390px;
+            }
+
+            .history-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .portfolio-project {
+                min-height: 430px;
+            }
+
+            .portfolio-image,
+            .portfolio-project-wide .portfolio-image {
+                height: 330px;
+            }
+
+            .portfolio-overlay-content h3 {
+                font-size: 27px;
+            }
+
+            .portfolio-bottom {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+            .portfolio-link {
+                width: 100%;
+
+                text-align: center;
+            }
+
+            .portfolio-cta {
+                padding: 30px 20px;
+            }
+
+            .exus-history {
+                padding: 35px 22px;
+            }
+
+            .history-text h2 {
+                font-size: 30px;
+            }
+
+            .history-content {
+                gap: 30px;
+            }
+
+            .certificate-modal {
+                padding: 15px;
+            }
+
+            .certificate-modal-content {
+                padding: 8px;
+            }
+
+            .certificate-close {
+                top: -10px;
+                right: -10px;
+            }
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE GENERAL
         ========================================= */
 
         @media(max-width:850px) {
@@ -765,151 +1515,489 @@
 >
 
 
-    <div class="section-head">
+    <div class="professional-portfolio">
 
 
-        <div>
+        <div class="section-head">
 
-            <div class="kicker">
-                PORTAFOLIO DEMO
+            <div>
+
+                <div class="kicker">
+                    PORTAFOLIO DEMO
+                </div>
+
+
+                <h2>
+
+                    Así podría verse
+                    <br>
+                    tu negocio.
+
+                </h2>
+
             </div>
 
 
-            <h2>
+            <p>
 
-                Así podría verse
-                <br>
-                tu negocio.
+                Diseños demostrativos creados para mostrar
+                cómo podemos transformar diferentes negocios
+                en experiencias digitales profesionales.
 
-            </h2>
+            </p>
 
         </div>
 
 
-        <p>
 
-            Ejemplos demostrativos creados
-            para mostrar diferentes estilos.
+        <div class="portfolio-projects">
 
-        </p>
+
+            <!-- =====================================
+                 BLACKROOM
+            ====================================== -->
+
+            <article class="portfolio-project">
+
+
+                <div class="portfolio-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1400&q=85"
+                        alt="Barbería moderna - proyecto demo BLACKROOM"
+                        loading="lazy"
+                    >
+
+
+                    <span class="portfolio-demo-label">
+                        PROYECTO DEMO
+                    </span>
+
+
+                    <div class="portfolio-overlay-content">
+
+                        <span class="portfolio-category">
+                            BARBERÍA PREMIUM
+                        </span>
+
+                        <h3>
+                            BLACKROOM
+                        </h3>
+
+                        <p>
+                            Diseño moderno para una barbería
+                            que quiere destacar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-bottom">
+
+                    <div class="portfolio-bottom-info">
+
+                        <strong>
+                            BLACKROOM
+                        </strong>
+
+                        <span>
+                            Barbería • Reservas • WhatsApp
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20BLACKROOM."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="portfolio-link"
+                    >
+                        Crear algo similar →
+                    </a>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =====================================
+                 CASA SABOR
+            ====================================== -->
+
+            <article class="portfolio-project">
+
+
+                <div class="portfolio-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
+                        alt="Restaurante moderno - proyecto demo CASA SABOR"
+                        loading="lazy"
+                    >
+
+
+                    <span class="portfolio-demo-label">
+                        PROYECTO DEMO
+                    </span>
+
+
+                    <div class="portfolio-overlay-content">
+
+                        <span class="portfolio-category">
+                            RESTAURANTE
+                        </span>
+
+                        <h3>
+                            CASA SABOR
+                        </h3>
+
+                        <p>
+                            Una página pensada para mostrar
+                            platos, menú y contacto.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-bottom">
+
+                    <div class="portfolio-bottom-info">
+
+                        <strong>
+                            CASA SABOR
+                        </strong>
+
+                        <span>
+                            Restaurante • Menú • WhatsApp
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20CASA%20SABOR."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="portfolio-link"
+                    >
+                        Crear algo similar →
+                    </a>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =====================================
+                 RIDER GARAGE
+            ====================================== -->
+
+            <article
+                class="portfolio-project portfolio-project-wide"
+            >
+
+
+                <div class="portfolio-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=85"
+                        alt="Motocicleta y taller - proyecto demo RIDER GARAGE"
+                        loading="lazy"
+                    >
+
+
+                    <span class="portfolio-demo-label">
+                        PROYECTO DEMO
+                    </span>
+
+
+                    <div class="portfolio-overlay-content">
+
+                        <span class="portfolio-category">
+                            MUNDO MOTOR
+                        </span>
+
+                        <h3>
+                            RIDER GARAGE
+                        </h3>
+
+                        <p>
+                            Catálogo, repuestos, accesorios
+                            y servicios para motociclistas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-bottom">
+
+                    <div class="portfolio-bottom-info">
+
+                        <strong>
+                            RIDER GARAGE
+                        </strong>
+
+                        <span>
+                            Motos • Repuestos • Catálogo online
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20RIDER%20GARAGE."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="portfolio-link"
+                    >
+                        Crear algo similar →
+                    </a>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+
+        <div class="demo-warning">
+
+            ⚡ Proyectos demostrativos — las imágenes y marcas
+            utilizadas son únicamente de referencia y no representan
+            clientes reales de EXUS WEB.
+
+        </div>
+
+
+
+        <div class="portfolio-cta">
+
+            <h3>
+                ¿Te imaginas tu negocio así?
+            </h3>
+
+            <p>
+                Podemos crear una página personalizada con tus
+                colores, fotografías, productos, servicios,
+                ubicación y WhatsApp.
+            </p>
+
+
+            <a
+                href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%20%F0%9F%91%8B%20Quiero%20crear%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Quiero mi página →
+            </a>
+
+        </div>
 
 
     </div>
 
+</section>
 
 
-    <div class="project-grid">
+
+<!-- =====================================================
+     NUESTRA HISTORIA
+===================================================== -->
+
+<section class="section" id="historia">
 
 
-        <article class="project p1">
-
-            <span class="project-label">
-                DEMO
-            </span>
+    <div class="exus-history">
 
 
-            <div class="project-info">
+        <div class="history-content">
 
-                <h3>
-                    BLACKROOM
-                </h3>
+
+            <div class="history-text">
+
+
+                <div class="kicker">
+                    NUESTRA HISTORIA
+                </div>
+
+
+                <h2>
+
+                    De una idea
+                    <br>
+                    a <em>EXUS WEB.</em>
+
+                </h2>
+
 
                 <p>
-                    Barbería moderna
+
+                    EXUS WEB comenzó como una idea entre nosotros,
+                    con ganas de aprender más sobre tecnología,
+                    diseño y páginas web. Poco a poco fuimos
+                    trabajando en el proyecto, aprendiendo de los
+                    errores y buscando que cada cosa que hiciéramos
+                    se viera mejor.
+
                 </p>
 
 
-                <a
-                    href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20BLACKROOM."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Crear algo similar →
-                </a>
+                <p>
+
+                    Con el tiempo, EXUS fue tomando forma y
+                    empezamos a verlo no solo como un trabajo,
+                    sino como un proyecto que podíamos seguir
+                    mejorando y llevar más lejos.
+
+                </p>
+
+
+                <p>
+
+                    El <strong>24 de febrero de 2025</strong>
+                    recibimos un certificado por el desarrollo
+                    y diseño de nuestro proyecto web, algo que
+                    para nosotros representa una parte importante
+                    de lo que hemos conseguido hasta ahora.
+
+                </p>
+
+
+                <p>
+
+                    <strong>EXUS WEB todavía está creciendo</strong>,
+                    y esta es apenas una parte de nuestra historia.
+                    Queremos seguir aprendiendo, creando nuevos
+                    proyectos y demostrar hasta dónde podemos
+                    llegar como equipo.
+
+                </p>
+
+
+                <div class="history-final">
+
+                    EXUS WEB — esto apenas comienza. 🚀
+
+                </div>
 
 
             </div>
 
-        </article>
 
 
+            <!-- =========================================
+                 CERTIFICADO
+            ========================================== -->
 
-        <article class="project p2">
-
-            <span class="project-label">
-                DEMO
-            </span>
-
-
-            <div class="project-info">
-
-                <h3>
-                    CASA SABOR
-                </h3>
-
-                <p>
-                    Restaurante
-                </p>
+            <div class="history-certificate">
 
 
-                <a
-                    href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20CASA%20SABOR."
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <div class="history-certificate-label">
+
+                    🏆
+
+                    RECONOCIMIENTO EXUS WEB
+
+                </div>
+
+
+                <img
+                    src="img/certificado-exus.jpg"
+                    alt="Certificado de Desarrollo y Diseño Web de EXUS WEB"
+                    class="history-certificate-image"
+                    id="certificateImage"
                 >
-                    Crear algo similar →
-                </a>
+
+
+                <div class="history-certificate-info">
+
+                    <strong>
+                        Certificado de Desarrollo y Diseño Web
+                    </strong>
+
+                    <span>
+                        Emitido el 24 de febrero de 2025
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="history-certificate-button"
+                        id="openCertificate"
+                    >
+
+                        VER CERTIFICADO
+
+                        →
+
+                    </button>
+
+                </div>
 
 
             </div>
 
-        </article>
 
+        </div>
 
-
-        <article class="project p3">
-
-            <span class="project-label">
-                DEMO
-            </span>
-
-
-            <div class="project-info">
-
-                <h3>
-                    RIDER GARAGE
-                </h3>
-
-                <p>
-                    Taller y accesorios para motos
-                </p>
-
-
-                <a
-                    href="https://wa.me/573219272643?text=Hola%20EXUS%20WEB%2C%20me%20gust%C3%B3%20el%20dise%C3%B1o%20de%20RIDER%20GARAGE."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Crear algo similar →
-                </a>
-
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-
-    <div class="demo-warning">
-
-        ⚡ Proyectos demostrativos — no representan clientes reales.
 
     </div>
 
 
 </section>
+
+
+
+<!-- =====================================================
+     MODAL DEL CERTIFICADO
+===================================================== -->
+
+<div
+    class="certificate-modal"
+    id="certificateModal"
+    aria-hidden="true"
+>
+
+
+    <div class="certificate-modal-content">
+
+
+        <button
+            type="button"
+            class="certificate-close"
+            id="closeCertificate"
+            aria-label="Cerrar certificado"
+        >
+
+            ×
+
+        </button>
+
+
+        <img
+            src="img/certificado-exus.jpg"
+            alt="Certificado de EXUS WEB"
+        >
+
+
+    </div>
+
+
+</div>
 
 
 
@@ -1205,10 +2293,6 @@
     </div>
 
 
-    <!-- =================================================
-         DESCUENTO PRIMERA COMPRA
-    ================================================== -->
-
     <div>
 
         <strong>
@@ -1226,8 +2310,6 @@
 
     <div class="price-grid">
 
-
-        <!-- BÁSICO -->
 
         <article>
 
@@ -1283,8 +2365,6 @@
         </article>
 
 
-
-        <!-- PROFESIONAL -->
 
         <article class="featured">
 
@@ -1348,8 +2428,6 @@
 
 
 
-        <!-- TIENDA -->
-
         <article>
 
             <span>
@@ -1409,10 +2487,6 @@
     </div>
 
 
-    <!-- =================================================
-         MANTENIMIENTO Y GARANTÍA
-    ================================================== -->
-
     <div>
 
         <strong>
@@ -1426,10 +2500,6 @@
 
     </div>
 
-
-    <!-- =================================================
-         PRECIOS CON DESCUENTO
-    ================================================== -->
 
     <div>
 
@@ -1605,9 +2675,11 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
-        const menuButton = document.getElementById("menuButton");
+        const menuButton =
+            document.getElementById("menuButton");
 
-        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileMenu =
+            document.getElementById("mobileMenu");
 
 
         /* =========================================
@@ -1646,7 +2718,7 @@
 
         const elements =
             document.querySelectorAll(
-                ".services-grid article, .project, .steps div, .price-grid article"
+                ".services-grid article, .project, .steps div, .price-grid article, .portfolio-project"
             );
 
 
@@ -1689,6 +2761,116 @@
             observer.observe(element);
 
         });
+
+
+        /* =========================================
+           CERTIFICADO EXUS WEB
+        ========================================= */
+
+        const certificateModal =
+            document.getElementById("certificateModal");
+
+        const openCertificate =
+            document.getElementById("openCertificate");
+
+        const certificateImage =
+            document.getElementById("certificateImage");
+
+        const closeCertificate =
+            document.getElementById("closeCertificate");
+
+
+        if (
+            certificateModal &&
+            openCertificate &&
+            closeCertificate
+        ) {
+
+
+            function showCertificate() {
+
+                certificateModal.classList.add("active");
+
+                certificateModal.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                document.body.style.overflow = "hidden";
+
+            }
+
+
+            function hideCertificate() {
+
+                certificateModal.classList.remove("active");
+
+                certificateModal.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+                document.body.style.overflow = "";
+
+            }
+
+
+            openCertificate.addEventListener(
+                "click",
+                showCertificate
+            );
+
+
+            if (certificateImage) {
+
+                certificateImage.addEventListener(
+                    "click",
+                    showCertificate
+                );
+
+            }
+
+
+            closeCertificate.addEventListener(
+                "click",
+                hideCertificate
+            );
+
+
+            certificateModal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target ===
+                        certificateModal
+                    ) {
+
+                        hideCertificate();
+
+                    }
+
+                }
+            );
+
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Escape" &&
+                        certificateModal.classList.contains("active")
+                    ) {
+
+                        hideCertificate();
+
+                    }
+
+                }
+            );
+
+        }
 
 
     });

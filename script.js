@@ -122,7 +122,7 @@ const basicBtn = document.getElementById("basicBtn");
 if (basicBtn) {
 
   const basicMessage = encodeURIComponent(
-    "Hola EXUS WEB 👋 Estoy interesado en el PLAN BÁSICO de $99.000 COP. Quiero recibir más información."
+    "Hola EXUS WEB 👋 Estoy interesado en el PLAN BÁSICO, de $99.000 COP. Quiero recibir más información."
   );
 
   basicBtn.href = `https://wa.me/${WHATSAPP}?text=${basicMessage}`;
@@ -139,7 +139,7 @@ const professionalBtn = document.getElementById("professionalBtn");
 if (professionalBtn) {
 
   const professionalMessage = encodeURIComponent(
-    "Hola EXUS WEB 👋 Estoy interesado en el PLAN PROFESIONAL de $189.000 COP. Quiero recibir más información."
+    "Hola EXUS WEB 👋 Estoy interesado en el PLAN PROFESIONAL, de $189.000 COP. Quiero recibir más información."
   );
 
   professionalBtn.href = `https://wa.me/${WHATSAPP}?text=${professionalMessage}`;
@@ -156,7 +156,7 @@ const storeBtn = document.getElementById("storeBtn");
 if (storeBtn) {
 
   const storeMessage = encodeURIComponent(
-    "Hola EXUS WEB 👋 Estoy interesado en el PLAN TIENDA ONLINE de $399.000 COP. Quiero recibir más información."
+    "Hola EXUS WEB 👋 Estoy interesado en el PLAN TIENDA ONLINE, de $399.000 COP. Quiero recibir más información."
   );
 
   storeBtn.href = `https://wa.me/${WHATSAPP}?text=${storeMessage}`;
